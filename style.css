@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Times New Roman", Times, serif;
+	overflow-x: hidden;
+}
+.left {
+	color: blue;
+	cursor: pointer;
+}
+
+ul {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-around;
+	border: 1px solid black;
+	height: 10vh;
+	align-items: center;
+	min-width: 100vw;
+}
+.left-Content {
+	border: 1px solid black;
+	display: inline-block;
+	height: 100%;
+	line-height: 3em;
+	width: 10em;
+	position: relative;
+	/* display: none; */
+}
+.left-inner-Content {
+	position: relative;
+	left: 0.7em;
+}
+
+hr {
+	width: 100%;
+}
+.section-Content {
+	display: flex;
+	position: absolute;
+	justify-content: space-between;
+	width: 100vw;
+	left: 10em;
+	top: 6em;
+	border-bottom: 1px solid black;
+}
+.filter-Content {
+	display: flex;
+
+	position: absolute;
+	width: 100%;
+	left: 10em;
+	top: 8em;
+	display: none;
+}
+
+.main-Content {
+	/*most likely going to need a position relative on parent, so we don't do it on the body.When we click on it, where also going to have to move main content down.*/
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+	row-gap: 7em;
+	padding: 2em;
+	position: absolute;
+	width: 82%;
+	left: 10em;
+	top: 10em;
+	border: 1px solid black;
+	min-height: 100%;
+}
+.main-Content div {
+	border: 1px solid black;
+	height: 50%;
+	width: 15em;
+	max-width: 30em;
+	min-height: 8em;
+}
+
+/*SEARCH.HTML SPECIFIC CONTNENT*/
+.main-content-Filter {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, repeat(1, fr));
+	padding-left: 10%;
+	gap: 2em;
+	position: absolute;
+	width: 82%;
+	left: 10em;
+	top: 10em;
+	border: 1px solid black;
+	min-height: 100%;
+}
+.main-content-Filter div {
+	border: 1px solid black;
+	width: 25em;
+	height: 10em;
+}
+#filter-Button {
+	color: blue;
+}
